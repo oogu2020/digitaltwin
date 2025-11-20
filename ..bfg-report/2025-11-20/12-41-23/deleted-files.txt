@@ -1,0 +1,1 @@
+93749dfdbeb4e690ce5ddbea6735d0843535f9d6 812980432 terraform-provider-aws_v6.21.0_x5

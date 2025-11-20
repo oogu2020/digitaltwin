@@ -44,6 +44,7 @@ lambda-deployment.zip
 lambda-package/
 
 # Terraform
+.terraform
 *.tfstate
 *.tfstate.*
 .terraform/
