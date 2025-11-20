@@ -354,3 +354,4 @@ resource "aws_route53_record" "alias_www_ipv6" {
     evaluate_target_health = false
   }
 }
+
