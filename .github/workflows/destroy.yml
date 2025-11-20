@@ -1,4 +1,3 @@
-```yaml
 name: Destroy Environment
 
 on:
@@ -83,4 +82,3 @@ git commit -m "Add CI/CD with GitHub Actions, S3 backend, and updated scripts"
 
 # Push to GitHub
 git push
-```
