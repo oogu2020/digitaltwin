@@ -1,0 +1,22 @@
+[
+  {
+    "role": "user",
+    "content": "hi there",
+    "timestamp": "2025-11-17T18:54:10.878771"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! Welcome to my website. I'm Prince the OG. How can I assist you today?",
+    "timestamp": "2025-11-17T18:54:10.878789"
+  },
+  {
+    "role": "user",
+    "content": "this is Malik",
+    "timestamp": "2025-11-17T18:54:29.416998"
+  },
+  {
+    "role": "assistant",
+    "content": "Hi Malik! It's great to meet you. What brings you to my website today? Are you interested in AI, or is there something specific you'd like to discuss?",
+    "timestamp": "2025-11-17T18:54:29.417011"
+  }
+]

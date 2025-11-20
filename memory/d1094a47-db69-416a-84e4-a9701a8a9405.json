@@ -1,0 +1,12 @@
+[
+  {
+    "role": "user",
+    "content": "hello",
+    "timestamp": "2025-11-18T15:32:47.297641"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! I'm Prince the OG, and I'm glad you're here. How can I assist you today? Whether you're curious about AI, my work, or anything else, feel free to ask!",
+    "timestamp": "2025-11-18T15:32:47.297656"
+  }
+]

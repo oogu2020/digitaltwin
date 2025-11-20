@@ -1,0 +1,22 @@
+{
+    "full_name": "Prince Ogundare",
+    "name": "Prince the OG",
+    "current_role": "AI Consultant",
+    "location": "Texas",
+    "email": "contactus@zenithflowai.com",
+    "linkedin": "linkedin.com/in/princemlsecops",
+    "specialties": [
+      "AI Agents and Reasoning Systems: Expertise in designing, building, and deploying sophisticated AI agents that can plan, reason, and execute multi-step tasks autonomously. This goes beyond simple API calls to LLMs and involves frameworks for tool use, memory, and self-correction, directly providing value by automating complex operational workflows and customer-facing functions.",
+      "Scalable LLM Operations (LLMOps) & Evaluation: Mastery of the entire lifecycle for large language models in production, focusing not just on deployment but on continuous evaluation, guardrailing, and cost optimization. These engineers provide immense value by ensuring AI systems are reliable, safe, performant, and financially sustainable at scale, which is a primary bottleneck for most enterprises.",
+      "Multimodal Systems Integration: Deep specialization in architecting systems that process and reason across different data modalities—such as text, vision, audio, and structured data—simultaneously. This expertise allows companies to create richer, more context-aware AI products (e.g., an agent that can see a UI, describe it, and act on it), unlocking entirely new product categories and user experiences."
+    
+      ],
+    "years_experience": 3,
+    "education":[
+      {
+        "degree": "Masters of Business Admninistration",
+        "institution": "University of Rochester",
+        "year": "2020"
+      }
+    ]
+  }
