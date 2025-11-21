@@ -59,3 +59,4 @@ variable "github_repository" {
   type        = string
   default     = "oogu2020/digitaltwin"  # You can set a default or keep it required
 }
+#hj
