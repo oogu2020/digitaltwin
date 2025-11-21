@@ -119,6 +119,53 @@ resource "aws_iam_role_policy_attachment" "lambda_s3" {
   role       = aws_iam_role.lambda_role.name
 }
 
+# OIDC Provider for GitHub Actions
+resource "aws_iam_openid_connect_provider" "github" {
+  url = "https://token.actions.githubusercontent.com"
+
+  client_id_list = [
+    "sts.amazonaws.com",
+  ]
+
+  thumbprint_list = [
+    "6938fd4d98bab03faadb97b34396831e3780aea1",
+  ]
+
+  tags = local.common_tags
+}
+
+# IAM Role for GitHub Actions
+resource "aws_iam_role" "github_actions" {
+  name = "github-actions-role"
+  tags = local.common_tags
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          Federated = "arn:aws:iam::${data.aws_caller_identity.current.account_id}:oidc-provider/token.actions.githubusercontent.com"
+        }
+        Action = "sts:AssumeRoleWithWebIdentity"
+        Condition = {
+          StringEquals = {
+            "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
+          }
+          StringLike = {
+            "token.actions.githubusercontent.com:sub" = "repo:${var.github_repository}:*"
+          }
+        }
+      }
+    ]
+  })
+}
+
+resource "aws_iam_role_policy_attachment" "github_actions_admin" {
+  role       = aws_iam_role.github_actions.name
+  policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+}
+
 # Lambda function
 resource "aws_lambda_function" "api" {
   filename         = "${path.module}/../backend/lambda-deployment.zip"
@@ -354,4 +401,3 @@ resource "aws_route53_record" "alias_www_ipv6" {
     evaluate_target_health = false
   }
 }
-

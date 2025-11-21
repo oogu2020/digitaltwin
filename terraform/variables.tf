@@ -51,3 +51,11 @@ variable "root_domain" {
   type        = string
   default     = ""
 }
+
+# variables.tf
+
+variable "github_repository" {
+  description = "GitHub repository in format 'owner/repo'"
+  type        = string
+  default     = "oogu2020/digitaltwin"  # You can set a default or keep it required
+}
